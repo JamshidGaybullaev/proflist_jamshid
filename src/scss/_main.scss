@@ -919,6 +919,9 @@ nav {
     &__inner {
         display: flex;
         gap: 5px;
+        @media (max-width: 480px) {
+            flex-direction: column;
+        }
     }
 
     &__hover:hover{
