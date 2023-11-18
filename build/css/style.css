@@ -269,6 +269,7 @@ body::-webkit-scrollbar-thumb {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+  text-decoration: underline;
   cursor: pointer;
 }
 
@@ -454,6 +455,8 @@ nav {
   font-size: clamp(1.25rem, 0.614rem + 3.18vw, 3rem);
   color: white;
   background-color: #141414;
+  max-width: 980px;
+  width: 100%;
   padding: 15px 30px;
 }
 
@@ -541,11 +544,11 @@ nav {
 }
 
 .about__text {
-  max-width: 490px;
-  width: 100%;
-  font-size: 16px;
-  font-weight: 400;
   color: #141414;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.3;
 }
 
 .about2__inner img {
@@ -861,6 +864,17 @@ nav {
   padding: 100px;
 }
 
+.footer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+}
+
+.footer__hover:hover {
+  color: white;
+}
+
 .footer__rows {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -872,6 +886,9 @@ nav {
 }
 
 .footer__row {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -885,16 +902,21 @@ nav {
 .footer__logo {
   max-width: 281px;
   width: 100%;
+  margin: 0 auto;
 }
 
 .footer__info {
-  font-weight: 800;
+  color: #141414;
   font-size: 12px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
 }
 
 .footer__contact {
+  padding-bottom: 8px;
   font-weight: 800;
-  font-size: clamp(0.875rem, 0.83rem + 0.2vw, 1rem);
+  font-size: clamp(0.813rem, 0.767rem + 0.2vw, 0.938rem);
 }
 
 .footer__phone {
@@ -914,7 +936,7 @@ nav {
 }
 
 .footer__email {
-  font-size: clamp(1rem, 0.808rem + 0.96vw, 1.625rem);
+  font-size: clamp(0.875rem, 0.807rem + 0.3vw, 1.063rem);
   font-weight: 900;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -922,11 +944,26 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-decoration: underline;
+  color: #141414;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .footer__link {
-  font-weight: 900;
-  color: black;
+  color: #141414;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.footer__link:not(:first-child) {
+  text-decoration: underline;
 }
 
 .footer__lan {
@@ -940,6 +977,7 @@ nav {
 }
 
 .footer__soc {
+  text-decoration: underline;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -949,7 +987,10 @@ nav {
   gap: 10px;
   color: black;
   font-weight: 900;
-  font-size: 14px;
+  font-size: 12px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
   cursor: pointer;
 }
 
@@ -1777,7 +1818,7 @@ textarea:focus {
   }
 
   .footer__info {
-    font-size: 20px;
+    font-size: 13px;
     font-weight: 900;
   }
 

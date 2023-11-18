@@ -17,8 +17,7 @@
 
     // .header__wrapper
 
-    &__wrapper {
-    }
+    &__wrapper {}
 
     // .header__top
 
@@ -84,6 +83,7 @@
         gap: 5px;
         color: white;
         transition: all 0.3s;
+        text-decoration: underline;
 
         cursor: pointer;
 
@@ -276,8 +276,7 @@ nav {
     gap: 25px;
 
     // .menu__item
-    &__item {
-    }
+    &__item {}
 
     // .menu__item-link
     &__item-link {
@@ -285,7 +284,8 @@ nav {
         font-size: 18px;
         font-style: normal;
         font-weight: 800;
-        line-height: 130%; /* 23.4px */
+        line-height: 130%;
+        /* 23.4px */
         text-decoration-line: underline;
     }
 }
@@ -299,6 +299,7 @@ nav {
 
 // Burger menu styles
 @media screen and (max-width: $burgerBreakpoint) {
+
     // .menu
     .menu {
         position: fixed;
@@ -410,6 +411,8 @@ nav {
         font-size: clamp(1.25rem, 0.614rem + 3.18vw, 3rem);
         color: white;
         background-color: #141414;
+        max-width: 980px;
+        width: 100%;
         padding: 15px 30px;
     }
 }
@@ -523,12 +526,11 @@ nav {
     // .about__text
 
     &__text {
-        max-width: 490px;
-        width: 100%;
-        // text-wrap: nowrap;
-        font-size: 16px;
-        font-weight: 400;
         color: #141414;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 1.3;
     }
 }
 
@@ -914,6 +916,16 @@ nav {
         }
     }
 
+    &__inner {
+        display: flex;
+        gap: 5px;
+    }
+
+    &__hover:hover{
+        color: white;
+    }
+
+
     // .footer__rows
 
     &__rows {
@@ -933,6 +945,7 @@ nav {
     // .footer__row
 
     &__row {
+        transition: all 0.3s;
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -961,16 +974,20 @@ nav {
     &__logo {
         max-width: 281px;
         width: 100%;
+        margin: 0 auto;
     }
 
     // .footer__info
 
     &__info {
-        font-weight: 800;
+        color: #141414;
         font-size: 12px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
 
         @media (max-width: 900px) {
-            font-size: 20px;
+            font-size: 13px;
             font-weight: 900;
         }
     }
@@ -978,8 +995,9 @@ nav {
     // .footer__contact
 
     &__contact {
+        padding-bottom: 8px;
         font-weight: 800;
-        font-size: clamp(0.875rem, 0.83rem + 0.2vw, 1rem);
+        font-size: clamp(0.813rem, 0.767rem + 0.2vw, 0.938rem);
 
         @media (max-width: 900px) {
             font-size: 20px;
@@ -1018,17 +1036,28 @@ nav {
     // .footer__email
 
     &__email {
-        font-size: clamp(1rem, 0.808rem + 0.96vw, 1.625rem);
+        font-size: clamp(0.875rem, 0.807rem + 0.3vw, 1.063rem);
         font-weight: 900;
         display: flex;
         align-items: center;
+        text-decoration: underline;
+        color: #141414;
+        transition: all 0.3s;
     }
 
     // .footer__link
 
     &__link {
-        font-weight: 900;
-        color: black;
+        color: #141414;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        transition: all 0.3s;
+    }
+
+    &__link:not(:first-child) {
+        text-decoration: underline;
     }
 
     // .footer__lan
@@ -1046,13 +1075,14 @@ nav {
     // .footer__soc
 
     &__soc {
+        text-decoration: underline;
         display: flex;
         align-items: center;
         gap: 10px;
         color: black;
         font-weight: 900;
-        font-size: 14px;
-
+        font-size: 12px;
+        transition: all 0.3s;
         cursor: pointer;
     }
 }
@@ -1089,18 +1119,15 @@ nav {
 
     // .why__arrow-content
 
-    &__arrow-content {
-    }
+    &__arrow-content {}
 
     // .why__content-title
 
-    &__content-title {
-    }
+    &__content-title {}
 
     // .why__content-text
 
-    &__content-text {
-    }
+    &__content-text {}
 }
 
 .contact {
@@ -1268,6 +1295,7 @@ textarea:focus {
     &__title {
         font-weight: 900;
         font-size: 32px;
+
         // padding: 25px 0 20px;
         @media (max-width: 480px) {
             text-align: center;
@@ -1514,6 +1542,7 @@ textarea:focus {
     text-align: center;
     padding: 0 0 25px;
 }
+
 .info__wrapper-item img {
     width: 100%;
 }
@@ -1569,8 +1598,8 @@ textarea:focus {
         display: none;
     }
 }
-.top {
-}
+
+.top {}
 
 .section-title {
     color: #141414;
@@ -1639,12 +1668,14 @@ textarea:focus {
 .why {
     padding-bottom: 50px;
     overflow-x: auto;
+
     // .why__wrapper
     &__wrapper {
         display: grid;
         grid-template-columns: repeat(4, 280px);
         gap: 40px 40px;
     }
+
     // .why__item
     &__item {
         display: flex;
@@ -1681,9 +1712,11 @@ textarea:focus {
             }
 
             &::before {
-                content: none;;
+                content: none;
+                ;
                 background-image: none;
             }
+
             &::after {
                 width: 28px;
                 background-color: none;
@@ -1691,14 +1724,17 @@ textarea:focus {
             }
         }
     }
+
     // .why__title
     &__title {
         color: #141414;
         font-size: 30px;
         font-style: normal;
         font-weight: 800;
-        line-height: 1.3; /* 39px */
+        line-height: 1.3;
+        /* 39px */
     }
+
     // .why__num
     &__num {
         color: #fbcc00;
@@ -1708,6 +1744,7 @@ textarea:focus {
         line-height: 130%;
         padding-bottom: 5px;
     }
+
     // .why__item-box
     &__item-box {
         display: flex;
@@ -1720,6 +1757,7 @@ textarea:focus {
         border-top: 4px solid black;
         border-bottom: 4px solid black;
     }
+
     // .why__name
     &__name {
         color: #141414;
@@ -1728,6 +1766,7 @@ textarea:focus {
         font-weight: 800;
         line-height: 1.3;
     }
+
     // .why__text
     &__text {
         color: #141414;
