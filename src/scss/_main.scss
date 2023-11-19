@@ -192,9 +192,14 @@
         align-items: center;
         color: black;
         font-weight: 900;
+        text-decoration: underline;
 
         @media (max-width: 700px) {
             display: none;
+        }
+
+        &:hover {
+            color: white;
         }
     }
 
@@ -586,9 +591,11 @@ nav {
     // .market__text
 
     &__text {
-        font-size: 16px;
-        color: #141414;
-        font-weight: 400;
+        color: gray;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 1.3;
     }
 
     // .market__right
@@ -629,7 +636,8 @@ nav {
         gap: 20px 20px;
 
         img {
-            width: 100%;
+            width: 240px;
+            max-width: 100%;
         }
 
         @media (max-width: 700px) {
@@ -655,6 +663,14 @@ nav {
             display: flex;
             flex-direction: column;
         }
+    }
+
+    &__mid-line p {
+        color: #141414;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.2;
     }
 
     // .card__right
@@ -691,16 +707,24 @@ nav {
     &__title {
         font-size: clamp(1.25rem, 0.98rem + 1.2vw, 2rem);
         font-weight: 900;
+        text-decoration: underline;
     }
 
     // .card__text
 
     &__text {
+        color: #585858;
         font-size: 16px;
-        font-weight: 400;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 1.3;
 
         &.yellow {
-            color: #fbcc00;
+            color: #FBCC00;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 1.4;
         }
     }
 
@@ -714,8 +738,12 @@ nav {
     // .card__price
 
     &__price {
+        color: #141414;
         font-size: 32px;
-        font-weight: 900;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 1.3;
+        text-transform: uppercase;
 
         &.s {
             font-size: 24px;
@@ -736,13 +764,8 @@ nav {
     &__mid-line {
         display: flex;
         justify-content: space-between;
-        border-bottom: 2px dashed black;
+        border-bottom: 1px dashed black;
         padding: 10px;
-
-        & p {
-            font-weight: 200;
-            color: #141414;
-        }
     }
 
     // .card__btns
@@ -771,16 +794,28 @@ nav {
         font-weight: 900;
         font-size: clamp(1rem, 0.91rem + 0.4vw, 1.25rem);
         text-wrap: nowrap;
+        transition: all .2s;
 
         & a {
-            color: black;
             text-align: center;
+            color: #141414;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 1.3;
+            cursor: pointer;
         }
     }
+
 
     &__line-num {
         font-weight: 900;
     }
+}
+
+
+.card__btn a:hover {
+    color: white;
 }
 
 .delivery {
@@ -798,7 +833,7 @@ nav {
     // .delivery__wrapper
 
     &__wrapper {
-        padding: 50px;
+        padding: 50px 0пш;
         display: flex;
         justify-content: space-between;
 
@@ -829,8 +864,11 @@ nav {
     // .delivery__title
 
     &__title {
+        color: #141414;
         font-size: 32px;
-        font-weight: 900;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 1.3;
     }
 
     // .delivery__box
@@ -846,8 +884,11 @@ nav {
     &__text {
         max-width: 660px;
         width: 100%;
-        line-height: 20.8px;
-        font-weight: 400;
+        color: #141414;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 1.3;
     }
 
     // .delivery__sub-title
@@ -919,12 +960,13 @@ nav {
     &__inner {
         display: flex;
         gap: 5px;
+
         @media (max-width: 480px) {
             flex-direction: column;
         }
     }
 
-    &__hover:hover{
+    &__hover:hover {
         color: white;
     }
 
@@ -1015,12 +1057,19 @@ nav {
         align-items: center;
         font-size: clamp(0.875rem, 0.83rem + 0.2vw, 1rem);
         font-weight: 900;
+        text-decoration: underline;
+        transition: all 0.3s;
+        cursor: pointer;
 
         @media (max-width: 900px) {
             display: block;
             font-size: 20px;
             font-weight: 900;
             text-align: center;
+        }
+
+        &:hover {
+            color: white;
         }
     }
 
@@ -1163,9 +1212,24 @@ nav {
 .connect {
     padding-top: 100px;
 
+    .section-title {
+        text-decoration: none;
+        color: #141414;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 120%;
+    }
+
     .btn {
+        transition: all 0.3s;
         margin-top: 10px;
         width: 143px;
+        text-decoration: underline;
+
+        &:hover {
+            color: #FBCC00;
+        }
     }
 
     @media (max-width: 768px) {
@@ -1185,6 +1249,7 @@ nav {
 
     // .connect__wrapper
     &__wrapper {
+        padding-bottom: 100px;
         align-items: center;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -1215,7 +1280,6 @@ nav {
 form {
     width: 100%;
     max-width: 100%;
-    height: 85%;
 }
 
 textarea {
@@ -1231,7 +1295,7 @@ textarea:focus {
 }
 
 .nav {
-    padding: 25px;
+    padding: 25px 0;
 
     &__box {
         display: flex;
@@ -1567,11 +1631,11 @@ textarea:focus {
 }
 
 .info__wrapper-text {
-    color: #585858;
     font-size: clamp(0.75rem, 0.705rem + 0.2vw, 0.875rem);
+    color: #585858;
     font-style: normal;
     font-weight: 300;
-    line-height: 1.3;
+    line-height: 130%;
 }
 
 .info__wrapper-price {
@@ -1663,9 +1727,14 @@ textarea:focus {
 }
 
 .catalog__title {
-    font-weight: 900;
     padding-bottom: 25px;
+    color: #141414;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 1.3;
     font-size: clamp(1.5rem, 1.32rem + 0.8vw, 2rem);
+    text-decoration: underline;
 }
 
 .why {
