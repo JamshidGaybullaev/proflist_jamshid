@@ -14,6 +14,7 @@
 
     <link rel="icon" href="./img/favicon.svg">
     <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="./fonts/stylesheet.css">
 </head>
 
 <body class="main__body">
@@ -25,7 +26,23 @@
 <!-- Main Page -->
 <main>
 
-@@include('./html/_nav.html')
+<!-- @@include('./html/_nav.html') -->
+
+<!-- NAV -->
+<div class="nav">
+
+    <div class="container">
+
+        <div class="nav__box">
+            <a class="nav__nav" href="./index.html">Главная</a>
+            <span>/</span>
+            <a class="active nav__nav" href="./delivery.html">Доставка и оплата</a>
+        </div>
+
+    </div>
+
+</div>
+<!-- NAV-END -->
 
 
 @@include('./html/_delivery.html')

@@ -1,12 +1,12 @@
-* {
-    font-family: "Roboto", sans-serif;
-}
-
 .container {
     width: 100%;
     max-width: 1360px;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+* {
+    font-family: Gilroy;
 }
 
 .header {
@@ -708,9 +708,6 @@ nav {
         @media (max-width: 680px) {
             height: 415px;
         }
-
-        // width: 350px;
-        // max-width: 100%;
     }
 
     // .card__left-top
