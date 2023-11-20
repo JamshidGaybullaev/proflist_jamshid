@@ -136,9 +136,13 @@
         font-weight: 800;
         line-height: 130%;
         text-decoration-line: underline;
+        transition: all 0.3s;
 
         @media (max-width: 700px) {
             display: none;
+        }
+        &:hover{
+            color: white;
         }
     }
 
@@ -289,9 +293,12 @@ nav {
         font-size: 18px;
         font-style: normal;
         font-weight: 800;
-        line-height: 130%;
-        /* 23.4px */
+        line-height: 1.3;
         text-decoration-line: underline;
+        transition: all 0.3s;
+        &:hover{
+            color: #FBCC00;
+        }
     }
 }
 
@@ -423,8 +430,7 @@ nav {
 }
 
 .pag {
-    padding: 10px;
-
+    padding-top: 30px;
     &__wrapper {
         display: flex;
         align-items: center;
@@ -445,6 +451,10 @@ nav {
         padding: 15px 18px;
         color: white;
         text-wrap: nowrap;
+        &:hover{
+            background: #FBCC00;
+            color: #141414;
+        }
     }
 
     // .pag__num
@@ -459,6 +469,10 @@ nav {
             @media (max-width: 560px) {
                 display: none;
             }
+        }
+        &:hover{
+            background: #FBCC00;
+            color: #141414;
         }
     }
 }
