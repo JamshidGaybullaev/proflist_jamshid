@@ -1,10 +1,3 @@
-.container {
-    width: 100%;
-    max-width: 1360px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
 * {
     font-family: Gilroy;
 }
@@ -81,11 +74,13 @@
         display: flex;
         align-items: center;
         gap: 5px;
-        color: white;
         transition: all 0.3s;
         text-decoration: underline;
-
-        cursor: pointer;
+        color: #FFF;
+        font-size: clamp(0.75rem, 0.649rem + 0.45vw, 1rem);
+        font-style: normal;
+        font-weight: 800;
+        line-height: 1.3;
 
         &:hover {
             // transition: all 0.3s;
@@ -134,7 +129,7 @@
         font-size: 20px;
         font-style: normal;
         font-weight: 800;
-        line-height: 130%;
+        line-height: 1.3;
         text-decoration-line: underline;
         transition: all 0.3s;
 
@@ -422,11 +417,12 @@ nav {
 
     &__wrapper-title {
         text-align: center;
-        font-size: clamp(1.25rem, 0.614rem + 3.18vw, 3rem);
+        font-size: clamp(1.25rem, 0.542rem + 3.15vw, 3rem);
         color: white;
         background-color: #141414;
         max-width: 980px;
         width: 100%;
+        font-weight: 800;
         padding: 15px 30px;
     }
 }
@@ -543,8 +539,11 @@ nav {
 
     &__title {
         font-size: clamp(1.5rem, 1.32rem + 0.8vw, 2rem);
-        color: #fbcc00;
-        font-weight: 900;
+        color: #FBCC00;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 1.2;
     }
 
     // .about__text
@@ -603,17 +602,20 @@ nav {
     // .market__title
 
     &__title {
+        color: #141414;
         font-size: 32px;
-        font-weight: 900;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 1.2;
     }
 
     // .market__text
 
     &__text {
-        color: gray;
-        font-size: 15px;
         font-style: normal;
         font-weight: 300;
+        color: #141414;
+        font-size: 16px;
         line-height: 1.3;
     }
 
@@ -623,6 +625,7 @@ nav {
         img {
             width: 100%;
             max-width: 665px;
+            height: 100%;
 
             @media (max-width: 1000px) {
                 object-position: center;
@@ -964,9 +967,18 @@ nav {
     background-size: cover;
     background-position: center;
 
+    & a {
+        color: #141414;
+        text-decoration: underline;
+        transition: all 0.3s;
+        &:hover{
+            color: white;
+        }   
+    }
+
     // .footer__wrapper
     &__wrapper {
-        padding: 100px;
+        // padding: 100px;
 
         @media (max-width: 480px) {
             padding: 100px 0;
@@ -1235,6 +1247,7 @@ nav {
         font-style: normal;
         font-weight: 800;
         line-height: 120%;
+        padding: 0px 0 25px 0px;
     }
 
     &__text {
@@ -1342,13 +1355,10 @@ textarea:focus {
     }
 }
 
-.section-title {
-    padding: 0px 0 25px 0px;
-}
-
 .header__top-link {
     font-style: normal;
     font-weight: 800;
+    font-size: 16px;
     line-height: 1.3;
     padding-bottom: 13px;
 }
@@ -1643,6 +1653,53 @@ textarea:focus {
 
 .info {
 
+    &__img{
+        width: 100%;
+    }
+
+    &__wrapper-item {
+        @media (max-width:768px) {
+            &.box {
+                display: none;
+            }
+        }
+
+        @media (max-width:360px) {
+            &.leave {
+                display: none;
+            }
+        }
+
+    }
+
+    &__title {
+        color: #141414;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 130%;
+        text-decoration-line: underline;
+        transition: all 0.3s;
+
+        &:hover {
+            color: #FBCC00;
+        }
+
+        &-link {
+            padding-bottom: 25px;
+            text-align: center;
+        }
+    }
+
+    .section-title {
+        color: #141414;
+        font-size: clamp(1.5rem, 1.318rem + 0.81vw, 2rem);
+        font-style: normal;
+        font-weight: 800;
+        line-height: 1.3;
+        text-decoration-line: underline;
+    }
+
 
     &__wrapper {
         display: grid;
@@ -1656,31 +1713,29 @@ textarea:focus {
         display: flex;
         padding-bottom: 15px;
 
-        &:nth-child(2n) {}
-
         &.top {
             &::after {
                 text-align: center;
                 content: '-50%';
                 width: max-content;
                 height: 30px;
-                padding: 5px 10px;
+                padding: 8px 10px 5px;
                 color: #141414;
                 font-size: 14px;
                 font-weight: 800;
                 letter-spacing: -0.2px;
-
                 background: #FBCC00;
-
                 position: absolute;
                 bottom: 15px;
                 left: 0;
+
+                @media (max-width:768px) {
+                    top: 50%;
+                }
             }
 
         }
-
     }
-
 }
 
 .info__wrapper-title {
@@ -1718,7 +1773,6 @@ textarea:focus {
     font-style: normal;
     font-weight: 800;
     line-height: 1.3;
-    text-decoration-line: strikethrough;
     text-transform: uppercase;
 }
 
@@ -1728,9 +1782,6 @@ textarea:focus {
         display: none;
     }
 }
-
-.top {}
-
 
 .section-title {
     color: #141414;
@@ -1808,10 +1859,10 @@ textarea:focus {
     // .why__wrapper
     &__wrapper {
         display: flex;
-        gap: 40px 40px;
 
-        @media (max-width:810px) {
+        @media (max-width:800px) {
             flex-direction: column;
+            gap: 10px;
         }
     }
 
@@ -1889,6 +1940,8 @@ textarea:focus {
 
     // .why__num
     &__num {
+        // margin-right: 10px;
+        // margin-left: 10px;
         color: #fbcc00;
         font-size: 48px;
         font-style: normal;
