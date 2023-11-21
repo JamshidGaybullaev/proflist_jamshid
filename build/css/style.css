@@ -928,9 +928,17 @@ nav {
   background-position: center;
 }
 
+.footer__main {
+  color: #141414;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  padding-bottom: 5px;
+}
+
 .footer a {
   color: #141414;
-  text-decoration: underline;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
@@ -959,6 +967,7 @@ nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 20px;
+  padding: 100px 0 100px;
 }
 
 .footer__row {
@@ -1009,6 +1018,7 @@ nav {
   -o-transition: all 0.3s;
   transition: all 0.3s;
   cursor: pointer;
+  gap: 10px;
 }
 
 .footer__phone:hover {
@@ -1016,8 +1026,12 @@ nav {
 }
 
 .footer__text {
+  color: #141414;
   font-size: 12px;
-  font-weight: 500;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
 }
 
 .footer__email {
@@ -1034,6 +1048,7 @@ nav {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+  gap: 5px;
 }
 
 .footer__link {
@@ -1052,13 +1067,19 @@ nav {
 }
 
 .footer__lan {
-  color: black;
-  font-weight: 900;
+  color: #141414;
   font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.3;
 }
 
 .footer__lan span {
   color: white;
+}
+
+.footer__lan a {
+  text-decoration: underline;
 }
 
 .footer__soc {
@@ -1111,7 +1132,7 @@ nav {
 }
 
 .contact {
-  padding-top: 25px;
+  padding-top: 50px;
   background-image: url(../assets/about-rectangle.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -1120,13 +1141,22 @@ nav {
   max-width: 100%;
 }
 
+.contact__title {
+  color: #141414;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.2;
+  padding-bottom: 25px;
+}
+
 .contact__link {
   color: #fbcc00;
 }
 
 .contact__text {
   color: #141414;
-  padding: 10px 0;
+  padding-bottom: 13px;
   font-size: 20px;
   font-style: normal;
   font-weight: 800;
@@ -2226,17 +2256,15 @@ textarea:focus {
     margin-bottom: 20px;
   }
 
+  .info__wrapper-item.leave {
+    display: none;
+  }
+
   .info__wrapper-item.top {
     display: none;
   }
 
   .info__wrapper {
     grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 360px) {
-  .info__wrapper-item.leave {
-    display: none;
   }
 }
