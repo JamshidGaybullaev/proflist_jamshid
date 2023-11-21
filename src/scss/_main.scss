@@ -1887,7 +1887,7 @@ textarea:focus {
     &__wrapper {
         display: flex;
 
-        @media (max-width:635px) {
+        @media (max-width:690px) {
             flex-direction: column;
             gap: 10px;
         }
@@ -1962,7 +1962,6 @@ textarea:focus {
         font-style: normal;
         font-weight: 800;
         line-height: 1.3;
-        /* 39px */
     }
 
     // .why__num
@@ -1970,7 +1969,7 @@ textarea:focus {
         // margin-right: 10px;
         // margin-left: 10px;
         color: #fbcc00;
-        font-size: 48px;
+        font-size: clamp(2rem, 1.591rem + 1.82vw, 3rem);
         font-style: normal;
         font-weight: 800;
         line-height: 130%;
@@ -1993,7 +1992,7 @@ textarea:focus {
     // .why__name
     &__name {
         color: #141414;
-        font-size: clamp(0.563rem, 0.384rem + 0.8vw, 1rem);
+        font-size: 16px;
         font-style: normal;
         font-weight: 800;
         line-height: 1.3;
@@ -2002,7 +2001,7 @@ textarea:focus {
     // .why__text
     &__text {
         color: #141414;
-        font-size: clamp(0.563rem, 0.486rem + 0.34vw, 0.75rem);
+        font-size: 12px;
         font-style: normal;
         font-weight: 300;
         line-height: 1.6;
