@@ -2156,6 +2156,13 @@ textarea:focus {
             flex-direction: column;
     gap: 10px;
   }
+
+  .why__num {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 30px;
+  }
 }
 
 @media (max-width: 680px) {

@@ -1974,6 +1974,10 @@ textarea:focus {
         font-weight: 800;
         line-height: 130%;
         padding-bottom: 5px;
+        @media (max-width:690px) {
+            align-items: center;
+            padding-left: 30px;
+        }
     }
 
     // .why__item-box
