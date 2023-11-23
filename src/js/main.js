@@ -98,3 +98,53 @@ function fixedNav() {
     }
 }
 window.addEventListener('scroll', fixedNav)
+
+
+
+
+
+
+
+// SWIPER
+
+const swiper1 = new Swiper(".mySwiper", {
+    spaceBetween: 10,
+    slidesPerView: 1,
+    freeMode: true,
+    watchSlidesProgress: true,
+
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 3,
+            spaceBetween: 10
+        },
+        // when window width is >= 480px
+        480: {
+            slidesPerView: 4,
+            spaceBetween: 20
+        },
+
+        720: {
+            slidesPerView: 4,
+            spaceBetween: 20
+        },
+    }
+});
+
+const swiper2 = new Swiper(".mySwiper2", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-next",
+        prevEl: ".swiper-prev",
+    },
+    thumbs: {
+        swiper: swiper1,
+    },
+
+    breakpoints: {
+
+    }
+
+});
