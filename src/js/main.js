@@ -101,50 +101,166 @@ window.addEventListener('scroll', fixedNav)
 
 
 
-
-
-
-
 // SWIPER
 
-const swiper1 = new Swiper(".mySwiper", {
-    spaceBetween: 10,
-    slidesPerView: 1,
-    freeMode: true,
-    watchSlidesProgress: true,
-
-    breakpoints: {
-        // when window width is >= 320px
-        320: {
-            slidesPerView: 3,
-            spaceBetween: 10
-        },
-        // when window width is >= 480px
-        480: {
-            slidesPerView: 4,
-            spaceBetween: 20
-        },
-
-        720: {
-            slidesPerView: 4,
-            spaceBetween: 20
-        },
-    }
-});
-
-const swiper2 = new Swiper(".mySwiper2", {
-    slidesPerView: 1,
-    spaceBetween: 10,
+const swiper = new Swiper('.card__swiper', {
+  
+  
     navigation: {
-        nextEl: ".swiper-next",
-        prevEl: ".swiper-prev",
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
-    thumbs: {
-        swiper: swiper1,
-    },
-
+  
+    
+    grabCursor: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    
     breakpoints: {
-
+      1450: {
+        slidesPerView: 1,
+        spaceBetween: 30,
+      },
+      992: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 1,
+      }
     }
+  });
 
-});
+
+  const swiper2 = new Swiper('.card__swiper2', {
+  
+  
+    // navigation: {
+    //   nextEl: '.swiper-button-next',
+    //   prevEl: '.swiper-button-prev',
+    // },
+  
+    
+    // grabCursor: true,
+    slidesPerView: 3 ,
+    spaceBetween: 10,
+    
+    breakpoints: {
+      1450: {
+        slidesPerView: 5,
+        spaceBetween: 10,
+      },
+      992: {
+        slidesPerView: 4,
+      },
+      768: {
+        slidesPerView: 3,
+      }
+    }, 
+    thumbs: {
+        swiper: swiper,
+      },
+
+    
+  });
+
+  // const swiper3 = new Swiper('.hero__swiper', {
+  
+  //   pagination: {
+  //     el: '.swiper-pagination',
+  //   },
+  
+  //   navigation: {
+  //     nextEl: '.swiper-button-next',
+  //     prevEl: '.swiper-button-prev',
+  //   },
+  
+  //   initialSlide: 3,
+  //   centeredSlides: true,
+  //   grabCursor: true,
+  //   slidesPerView: 1,
+  //   spaceBetween: 20,
+    
+  //   breakpoints: {
+  //     1450: {
+  //       slidesPerView: 4,
+  //       spaceBetween: 30,
+  //     },
+  //     992: {
+  //       slidesPerView: 3,
+  //     },
+  //     768: {
+  //       slidesPerView: 2,
+  //     }
+  //   }
+  // });
+
+  const swiper4 = new Swiper('.sertificate__swiper', {
+  
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    grabCursor: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    
+    breakpoints: {
+      1200: {
+        slidesPerView: 4,
+      },
+      992: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 2,
+      }
+    }
+  });
+
+
+
+
+  const swiper5 = new Swiper('.hero__swiper', {
+  
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // loop: true,
+  
+    // navigation: {
+    //   nextEl: '.swiper-button-next',
+    //   prevEl: '.swiper-button-prev',
+    // },
+  
+    autoplay: {
+      delay: 1000,
+    },
+
+    grabCursor: false,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    
+    breakpoints: {
+      1450: {
+        slidesPerView: 1,
+        // spaceBetween: 10,
+      },
+      992: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 1,
+      }
+    }
+  });
+
+
